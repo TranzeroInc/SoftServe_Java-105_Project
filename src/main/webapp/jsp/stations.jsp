@@ -8,21 +8,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>List of Stations</h1>
 	<table border="1">
-		<tr>
-			<td>Station Id</td>
-			<td>Station Code</td>
-			<td>Station Name</td>
+		<thead>
+			<tr>
+				<td>Number</td>
+				<td>Station Code</td>
+				<td>Station Name</td>
 
-		</tr>
-				<c:forEach var="station" items="${stationsList}">
-					<tr>
-						<td>${station.getStationId()}</td>
-						<td>${station.getStationCode()}</td>
-						<td>${station.getStationName()}</td>
+			</tr>
+		</thead>
+		<c:forEach items="${stationsList}" var="station">
+			<tr>
+				<td>${station.getStationId()}</td>
+				<td>${station.getStationCode()}</td>
+				<td>${station.getStationName()}</td>
 
-					</tr>
-				</c:forEach>
+			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>
